@@ -1,0 +1,85 @@
+
+<html lang="en">
+
+
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <h1 >Lectures - Spring 2017</h1>
+</head>
+<body style="margin-left:5em;margin-right:5em">
+
+
+
+<div  class="form-group" >
+  <form>
+
+    <label for="sel1">Course:</label>
+    <select class="form-control" id="course">
+      <option value="ecen4153">ECEN 4153 - Power Systems Analysis and Design</option>
+      <option value="ecen4233">ECEN 4233 - High Speed Computer Arithmetic</option>
+      <option value="ecen4503">ECEN 4503 - Random Signals and Noise</option>
+      <option value="ecen3113">ECEN 3113 - Energy, Environment and Economics</option>
+      <option value="ecen3513">ECEN 3513 - Signal Analysis</option>
+      <option value="ecen3913">ECEN 3913 - Solid State Electronic Devices</option>
+      <option value="ecen4413">ECEN 4413 - Automatic Control Systems</option>
+      <option value="ecen4523">ECEN 4523 - Communication Theory</option>
+      <option value="ecen5060">ECEN 5060 - Deep Learning</option>
+      <option value="ecen5153">ECEN 5153 - Direct Energy Conversion</option>
+      <option value="ecen5193">ECEN 5193 - Energy and Power Systems Area Requirements</option>
+      <option value="ecen5263">ECEN 5263 - VLSI Digital Systems Design</option>
+      <option value="ecen5533">ECEN 5533 - Modern Communication Theory</option>
+      <option value="ecen5613">ECEN 5613 - Electromagnetic Theory</option>
+      <option value="ecen5643">ECEN 5643 - Antennas Propagation for Communication</option>
+      <option value="ecen5713">ECEN 5713 - Linear Systems</option>
+      <option value="eet4363">EET 4363 - Digital Signal Processing</option>
+      <option value="ensc2143">ENSC 2143 - Strength of Materials</option>
+      <option value="ensc2213">ENSC 2213 - Thermodynamics</option>
+      <option value="ensc3233">ENSC 3233 - Fluid Mechanics</option>
+      <option value="iem3503">IEM 3503 - Engineering Economic Analysis</option>
+      <option value="iem3513">IEM 3513 - Engineering Decision Analysis</option>
+      <option value="mae5713">MAE 5713 - Lineaer Systems</option>
+      <option value="msis5273">MSIS 5273 - Legal and Ethical Issues in Information Technology</option>
+
+</select>
+
+
+    <label for="usr">Lecture:</label>
+    <input type="text" class="form-control" id="lect">
+  </form>
+
+  <br>
+  <button type="button" class="btn btn-primary btn-lg btn-block" onclick="displayLink()">GET LINK</button>
+</div>
+
+  <script>
+function displayLink(){
+  var e = document.getElementById("course");
+  var course = e.options[e.selectedIndex].value;
+
+  var number = document.getElementById("lect").value;
+  var linksrc = "http://ra.okstate.edu/STW_CEAT/DE/Spring2017/"+course+"/"+course+number+"/"+course+number+".html"
+  var html = "<a href=\""+linksrc+"\"\>"+linksrc+"\</a>"
+  document.getElementById("output").innerHTML = html;
+
+}
+
+  </script>
+
+  <div id="output">
+  </div>
+</body>
+<br>
+<hr>
+<footer class="footer">
+  <p><a href=mailto:james@touthang.info>James Touthang</a></p>
+</footer>
+
+</html>
+
